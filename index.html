@@ -10,10 +10,10 @@
       crossorigin="anonymous"
     />
     <link
-    href="/css/bootstrap.min.css"
-    rel="stylesheet"
-    crossorigin="anonymous"
-  />
+      href="/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -133,7 +133,7 @@
       height: 600px;
     } */
     .behindAnchor {
-      position:relative;
+      position: relative;
       z-index: 2;
     }
 
@@ -167,6 +167,11 @@
 
     .secureH1 {
       font-weight: 700;
+    }
+
+    .topBottomMargin {
+      margin-top: 70px;
+      margin-bottom: 70px;
     }
 
     .topBottomPadding {
@@ -296,6 +301,10 @@
       padding: 15px;
       border-radius: 10px;
     }
+
+    .mainButton {
+      padding: 10px;
+    }
   </style>
   <body>
     <div
@@ -358,12 +367,15 @@
         </div>
       </div>
 
-      <div class="row grayBox" style="margin-top: 50px; ">
-        <div class="col-12 col-sm-7" style="padding-top: 70px; padding-bottom: 70px;">
+      <div class="row grayBox" style="margin-top: 50px">
+        <div
+          class="col-12 col-sm-7"
+          style="padding-top: 70px; padding-bottom: 70px"
+        >
           <div class="col-12 col-sm-9">
             <img class="secure" src="/img/secure.png" />
             <h1 class="secureH1">Seguridad ante todo</h1>
-            <p class="text-justify">
+            <p class="">
               Almacenamos la información en múltiples servidores distribuidos en
               varios países, de esta forma podemos respaldar y sincronizar
               automáticamente todos los nodos de la red, garantizando la
@@ -374,7 +386,7 @@
           </div>
         </div>
         <div class="col-12 col-sm-5">
-          <img class="uiv1" src="/img/uiv1.png"/>
+          <img class="uiv1" src="/img/uiv1.png" />
         </div>
       </div>
       <div
@@ -385,7 +397,7 @@
           <div class="col-12 col-sm-9">
             <img class="secure" src="/img/secure.png" />
             <h1 class="secureH1">Sólido y confiable.</h1>
-            <div class="text-justify">
+            <div class="">
               Nuestro servicio garantiza que se puedan usar múltiples tipos de
               aplicaciones de manera simultánea, así como la separación de
               intereses, lo que significa que múltiples Smart Contracts pueden
@@ -432,7 +444,10 @@
         </div>
       </div>
 
-      <div class="row grayBox seriousBox" style="padding-top: 70px; padding-bottom: 70px">
+      <div
+        class="row grayBox seriousBox"
+        style="padding-top: 70px; padding-bottom: 70px"
+      >
         <div class="col-12 col-sm-7">
           <div class="col-12 col-sm-9">
             <h1 class="secureH1">
@@ -518,11 +533,24 @@
         </h2>
       </div>
       <div class="row text-center">
-        <div class="col-6"><input placeholder="Nombre"></div>
-        <div class="col-6"><input placeholder="Email"></div>
-        <button style="background-color: #0149b0; color: white; width: 100%;">
+        <div class="col-6"><input placeholder="Nombre" /></div>
+        <div class="col-6"><input placeholder="Email" /></div>
+        <button style="background-color: #0149b0; color: white; width: 100%">
           Mantenerme actualizado
         </button>
+      </div>
+    </div>
+    <div class="container d-block d-md-none">
+      <div class="row text-center blueBackgroundGradientDark">
+        <div class="col-12 col-sm-4 mainButton">
+            Misión
+        </div>
+        <div class="col-12 col-sm-4 mainButton">
+            Blockchain
+        </div>
+        <div class="col-12 col-sm-4 mainButton">
+            Documentación
+        </div>
       </div>
     </div>
     <script
