@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .blueBackground {
+      background-color: #0048b4;
+    }
+    .blueBackgroundGradient {
+      background: rgb(2, 85, 201);
+      background: linear-gradient(
+        45deg,
+        rgba(2, 85, 201, 1) 0%,
+        rgba(0, 39, 104, 1) 100%
+      );
+      color: white;
+    }
+    .blueBackgroundGradientDark {
+      background: rgb(2, 85, 201);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 39, 104, 1) 100%
+      );
+      color: white;
+    }
+    .logo {
+      width: 100%;
+    }
+    .container-fluid > div {
+      max-width: 900px; /* Example, but you can replace by the value you need */
+      margin: 0 auto;
+    }
+    .container-fluid > div > div {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 17px 30px;
+      border-radius: 30px;
+      border: 0;
+      color: black;
+      background-color: rgb(255, 255, 255);
+      letter-spacing: 1.5px;
+      font-size: 0.8em;
+      transition: all 0.3s ease;
+      box-shadow: rgb(200, 200, 200) 0px 10px 0px 0px;
+    }
+
+    button:hover {
+      box-shadow: rgb(220, 220, 220) 0px 7px 0px 0px;
+    }
+
+    button:active {
+      background-color: rgb(210, 210, 210);
+      /*50, 168, 80*/
+      box-shadow: rgb(180, 180, 180) 0px 0px 0px 0px;
+      transform: translateY(5px);
+      transition: 200ms;
+    }
+    /* .brain {
+      display: inherit;
+      bottom: 0;
+      left: 0;
+      padding-bottom: -100px;
+      clip: rect(0px, 50px, 100px, 0px);
+    } */
+
+    .img-wrapper {
+      max-height: 300px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      top: -200px;
+    }
+
+    .img-wrapper img {
+      width: 400px;
+      z-index: 0;
+    }
+
+    h3 {
+      font-weight: 700;
+    }
+    .whiteContainer {
+      padding-top: 5%;
+    }
+
+    .grayBox {
+      background-color: #ddd;
+      border-radius: 30px;
+      margin: 50px;
+    }
+
+    .grayBox > h1 {
+      font-weight: 700;
+    }
+
+    .blueBox {
+      background: rgb(2, 85, 201);
+      background: linear-gradient(128deg, #0255c9, #002769);
+      color: white;
+    }
+    /* .box-left-mini {
+      float: left;
+      background-size: 100px;
+      width: 1200px;
+      height: 600px;
+    } */
+    .behindAnchor {
+      position:relative;
+      z-index: 2;
+    }
+
+    .behind {
+      /* without position: relative/absoulte the z-index wo≤nt work!*/
+      position: absolute;
+      /* this moves the dives up or down*/
+      bottom: 0px;
+      /* this move the div left or right! */
+      left: 15px;
+      width: 30%;
+      /* height: 100px; */
+      /* background-color: blue; */
+      /* border-top: 2px solid brown; */
+      /* margin-top: -10px; */
+      z-index: 1;
+    }
+    .uiv1 {
+      margin: -50px;
+      /* position: absolute;
+      right: 0px;
+      width: 300px; */
+    }
+
+    .uiv2 {
+    }
+
+    .secure {
+      padding-bottom: 10px;
+    }
+
+    .secureH1 {
+      font-weight: 700;
+    }
+
+    .topBottomPadding {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .topBottomPaddingSmall {
+      padding-bottom: 20px;
+    }
+
+    .seriousBox {
+      background-color: white;
+      color: black;
+    }
+
+    /* Accordion */
+    :root {
+      --contentHeight: 30vh;
+      --sectionWidth: 700px;
+    }
+
+    section {
+      max-width: var(--sectionWidth);
+      margin: 40px auto;
+      width: 97%;
+      color: #fff;
+    }
+
+    summary {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 22px;
+      transition: 0.3s;
+      border-bottom: 2px solid;
+      user-select: none;
+    }
+
+    details > div {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: auto;
+      height: 100%;
+      user-select: none;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    details > div > img {
+      align-self: flex-start;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    details > div > p {
+      flex: 1;
+    }
+
+    @media (min-width: 768px) {
+      details[open] > div > p {
+        opacity: 0;
+        animation-name: showContent;
+        animation-duration: 0.6s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      details[open] > div {
+        animation-name: slideDown;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      details[open] > div > img {
+        opacity: 0;
+        height: 100%;
+        margin: 0;
+        animation-name: showImage;
+        animation-duration: 0.3s;
+        animation-delay: 0.15s;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+      }
+
+      to {
+        opacity: 1;
+        height: var(--contentHeight);
+        padding: 20px;
+      }
+    }
+
+    @keyframes showImage {
+      from {
+        opacity: 0;
+        clip-path: inset(50% 0 50% 0);
+        transform: scale(0.4);
+      }
+
+      to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @keyframes showContent {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* form */
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div
+      class="container-fluid blueBackgroundGradientDark align-middle behindAnchor"
+      style="z-index: 1"
+    >
+      <div>
+        <img class="behind" src="/img/brain.png" />
+      </div>
+      <div class="row fixed-max-width">
+        <div class="col-md-4">
+          <img class="logo" src="/img/logo_white.png" />
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Misión</div>
+        <div class="col-md-2">Blockchain</div>
+        <div class="col-md-2">Documentación</div>
+      </div>
+      <div style="padding: 60px">
+        <div class="row fixed-max-width">
+          <div class="col">
+            <h1 class="text-center" style="font-weight: 600">
+              Tecnología Blockchain transparente y auditable al alcance de
+              todos.
+            </h1>
+          </div>
+        </div>
+        <div class="row text-center" style="font-weight: 100">
+          <div class="col">
+            <h5>
+              Contamos con las fortalezas propias de la tecnología blockchain, y
+              con características especiales que nos convierten en la solución
+              ideal para su uso en diversos ambientes.
+            </h5>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <h5>
+              <button>Obtener Acceso Anticipado</button>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid whiteContainer">
+      <div class="row">
+        <div class="col">
+          <h3>Bienvenido al futuro de los contratos inteligentes.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span>
+            Los usuarios podrán registrarse de manera segura y ejercer su
+            derecho a voto con verificación de identidad (pasaporte / cédula) o
+            integración con sistemas de autenticación existentes como Google y
+            Facebook.
+          </span>
+        </div>
+      </div>
+      
+      <div class="row grayBox" style="margin-top: 50px; ">
+        <div class="col-7" style="padding-top: 70px; padding-bottom: 70px;">
+          <div class="col-9">
+            <img class="secure" src="/img/secure.png" />
+            <h1 class="secureH1">Seguridad ante todo</h1>
+            <p class="text-justify">
+              Almacenamos la información en múltiples servidores distribuidos en
+              varios países, de esta forma podemos respaldar y sincronizar
+              automáticamente todos los nodos de la red, garantizando la
+              seguridad e inviolabilidad de los datos ya que nuestros algoritmos
+              respaldan≤ la integridad de todo el sistema. Puedes estar
+              tranquilo, ya que tu voto será siempre secreto y seguro.
+            </p>
+          </div>
+        </div>
+        <div class="col-5">
+          <img class="uiv1" src="/img/uiv1.png"/>
+        </div>
+      </div>
+      <div
+        class="row grayBox blueBox"
+        style="margin-top: 50px; padding-top: 70px; padding-bottom: 70px"
+      >
+        <div class="col-7" style="">
+          <div class="col-9">
+            <img class="secure" src="/img/secure.png" />
+            <h1 class="secureH1">Sólido y confiable.</h1>
+            <div class="text-justify">
+              Nuestro servicio garantiza que se puedan usar múltiples tipos de
+              aplicaciones de manera simultánea, así como la separación de
+              intereses, lo que significa que múltiples Smart Contracts pueden
+              existir en la misma red, sin posibilidad de afectarse entre ellos.
+              Si quieres saber más acerca de los Smart- Contracts, haz click
+              aquí. Integración con VeneAvatar
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <img class="uiv2" src="/img/brain_small.png" />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid whiteContainer topBottomPadding">
+      <div class="row text-center">
+        <h2 style="font-weight: 700">
+          Cada bloque incluye la huella del bloque anterior, garantizando la
+          secuencia y control de la cadena de bloques, haciéndola
+          inquebrantable.
+        </h2>
+      </div>
+      <div class="row text-center topBottomPadding">
+        Cada evento firmado (Voto) lleva una huella única llamada “hash” la cual
+        permite verificar la integridad y veracidad del evento realizado por el
+        usuario.
+      </div>
+    </div>
+
+    <div
+      class="container-fluid blueBackgroundGradientDark align-middle"
+      style="z-index: 1"
+    >
+      <div class="row topBottomPadding">
+        <div class="col-6">
+          <h1>Auditable</h1>
+          <img src="/img/Lupa.png" style="width: 50px; padding-left: 10px" />
+        </div>
+        <div class="col-6">
+          Todos los eventos registrados durante la jornada son completamente
+          transparentes y auditables. Siempre protegiendo la información y
+          seguridad del usuario garantizando la trazabilidad de toda la
+          información.
+        </div>
+      </div>
+
+      <div class="row grayBox seriousBox" style="padding-top: 70px; padding-bottom: 70px">
+        <div class="col-7">
+          <div class="col-9">
+            <h1 class="secureH1">
+              Sin monedas ni comisiones por evento registrado.
+            </h1>
+            <div class="topBottomPaddingSmall">
+              Nuestra tecnología no está basada en el cobro de comisiones para
+              que la información sea procesada y aceptada, solo requiere que el
+              usuario posea los permisos de escritura necesarios en forma de
+              llaves digitales para registrar y validar su participación.
+            </div>
+            <button style="background-color: #0149b0; color: white">
+              Obtener Acceso Anticipado
+            </button>
+          </div>
+        </div>
+        <div class="col-5">
+          <img class="uiv1" src="/img/uiv1.png" />
+        </div>
+      </div>
+
+      <div class="row" style="padding-top: 100px">
+        <div class="col-12">
+          <h2>Preguntas Frecuentes</h2>
+        </div>
+
+        <section>
+          <details open>
+            <summary>¿Qué es un Smart Contract?</summary>
+            <div>
+              <span>
+                Un smart contract es una pieza pequeña de información que agrega
+                caracteristicas y funcionalidades únicas al bloque que forma
+                parte de la red, de manera siempre transparente y entendible.
+              </span>
+              <span>
+                De esta forma podemos definir un contrato inteligente como un
+                acuerdo inquebrantable entre partes capaz de ejecutarse y
+                hacerse cumplir por sí mismo.
+              </span>
+              <span>
+                Las dos caracteristicas principales de un smart contract son las
+                siguientes:
+              </span>
+              <span>
+                • Es INMUTABLE, esto significa que gracias a que funciona bajo
+                la tecnología Blockchain, una vez ha sido firmado en la cadena
+                de bloques, ya no puede editarse o modificarse.
+              </span>
+              <span>
+                • Es DESCENTRALIZADO No depende de una sola entidad.
+              </span>
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué es un Bloque?</summary>
+            <div></div>
+          </details>
+          <details>
+            <summary>¿Qué es un nodo?</summary>
+            <div></div>
+          </details>
+          <details>
+            <summary>¿Qué es una firma digital o hash?</summary>
+            <div></div>
+          </details>
+          <details>
+            <summary>¿Qué es un servidor?</summary>
+            <div></div>
+          </details>
+          <details>
+            <summary>¿Qué significa trazabilidad?</summary>
+            <div></div>
+          </details>
+        </section>
+      </div>
+    </div>
+    <div class="container-fluid whiteContainer topBottomPadding">
+      <div class="row text-center">
+        <h2 style="font-weight: 700">
+          Regístrate en nuestra newsletter para mantenerte el actualizado con
+          futuras actualizaciones
+        </h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-6"><input placeholder="Nombre"></div>
+        <div class="col-6"><input placeholder="Email"></div>
+        <button style="background-color: #0149b0; color: white">
+          Mantenerme actualizado
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
