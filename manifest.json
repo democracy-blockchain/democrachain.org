@@ -6,7 +6,7 @@
   ],
   "description": "Tu identidad digital.",
   "display": "standalone",
-  "gcm_sender_id": "49625052041",
+  "gcm_sender_id": "r3js-327810",
   "gcm_user_visible_only": true,
   "icons": [
     {
