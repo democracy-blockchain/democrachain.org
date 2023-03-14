@@ -201,6 +201,10 @@
       color: #fff;
     }
 
+    .pointy {
+      cursor: pointer;
+    }
+
     summary {
       display: block;
       cursor: pointer;
@@ -305,47 +309,66 @@
     .mainButton {
       padding: 10px;
     }
+
+    .topPadding {
+      margin-top: 60px !important;
+    }
+
+    #topBar a {
+      color: white;
+    }
   </style>
+  <script>
+    function goToDemo() {
+      document.location = "https://democraid.com";
+    }
+  </script>
   <body>
     <div
+      id="topBar"
       class="container-fluid blueBackgroundGradientDark align-middle behindAnchor"
       style="z-index: 1"
     >
       <div>
         <img class="behind" src="/img/brain.png" />
       </div>
-      <div class="row fixed-max-width">
+      <div class="row fixed-max-width" style="padding-top: 30px">
         <div class="col-md-4">
           <img class="logo" src="/img/logo_white.png" />
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-2 d-none d-md-block"></div>
-        <div class="col-md-2 d-none d-md-block"><a href="https://demv2-brasil-node.cloud.democrachain.org/v2/visor/index.html?scope=democraid">Visor de Blockchain</a></div>
-        <div class="col-md-2 d-none d-md-block"><a href="https://democraid.com/">Demo</a></div>
+        <div class="col-md-2 d-none d-md-block">
+          <a
+            href="https://demv2-brasil-node.cloud.democrachain.org/v2/visor/index.html?scope=democraid"
+            >Blockchain</a
+          >
+        </div>
+        <div class="col-md-2 d-none d-md-block">
+          <a href="https://democraid.com/">Demo</a>
+        </div>
       </div>
       <div>
         <div class="row fixed-max-width">
           <div class="col">
             <h1 class="text-center my-sm-5" style="font-weight: 600">
-              Tecnología Blockchain transparente y auditable al alcance de
-              todos.
+              Transparent and auditable Blockchain, accesible to all.
             </h1>
           </div>
         </div>
         <div class="row text-center" style="font-weight: 100">
           <div class="col my-sm-2 mx-sm-5">
             <h5>
-              La nueva identidad digital que sumada con las fortalezas de la
-              tecnología blockchain y el poder de internet, te permite acceder a
-              servicios en linea y ejercer tus derechos sin preocuparse por
-              fronteras geográficas ni trámites burocráticos.
+              The new digital identity powered by the blockchain technology,
+              allows you to access online services and exercise your rights
+              without worrying about geographical borders or red tape.
             </h5>
           </div>
         </div>
         <div class="row text-center">
           <div class="col my-sm-5">
             <h5>
-              <button>Obtener Acceso Anticipado</button>
+              <button class="pointy" onclick="goToDemo()">Try the Demo</button>
             </h5>
           </div>
         </div>
@@ -354,17 +377,7 @@
     <div class="container-fluid whiteContainer">
       <div class="row">
         <div class="col">
-          <h3>Bienvenido al futuro</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <span>
-            Los usuarios pueden registrarse facilmente de manera segura y
-            ejercer su derecho a voto. Verificación de identidad
-            (pasaporte/cédula/foto), integración con sistemas de autenticación
-            existentes como Google y Facebook.
-          </span>
+          <h3>Welcome to the future</h3>
         </div>
       </div>
 
@@ -375,17 +388,20 @@
         >
           <div class="col-12 col-sm-9">
             <img class="secure" src="/img/secure.png" />
-            <h1 class="secureH1">Seguridad ante todo</h1>
-            <p class="">
-              La información es almacenada de manera encriptada en múltiples
-              servidores distribuidos en a lo largo de todo el planeta,
-              garantizando la seguridad e inviolabilidad de los datos. Puedes
-              estar tranquilo, ya que tu voto será siempre secreto y seguro.
+            <h1 class="secureH1">Decentralized identity</h1>
+            <p class="">Users can easily register.</p>
+            <p>
+              The verification of documents is carried out by external entities,
+              who require proof of documents such as Passport, ID, photo, video
+              as part of the process.
+            </p>
+            <p>
+              We provide the tools for these entities to make it fast and easy.
             </p>
           </div>
         </div>
         <div class="col-12 col-sm-5">
-          <img class="uiv1" src="/img/uiv1.png" />
+          <img width="280" class="uiv1" src="/img/passport.png" />
         </div>
       </div>
       <div
@@ -394,12 +410,11 @@
       >
         <div class="col-12 col-sm-7" style="">
           <div class="col-12 col-sm-9">
-            <img class="secure" src="/img/secure.png" />
-            <h1 class="secureH1">Sólido y confiable.</h1>
+            <h1 class="secureH1">Solid and reliable.</h1>
             <div class="">
-              La cadena de bloques permite el funcionamiento simultaneo de
-              múltiples tipos de aplicaciones, así como la separación de
-              intereses.
+              The blockchain architecture allows the simultaneous operation of
+              multiple types of applications, as well as the separation of
+              scopes.
             </div>
           </div>
         </div>
@@ -411,15 +426,9 @@
     <div class="container-fluid whiteContainer topBottomPadding">
       <div class="row text-center">
         <h2 style="font-weight: 700">
-          Cada bloque incluye la huella del bloque anterior, garantizando la
-          secuencia y control de la cadena de bloques, haciéndola
-          inquebrantable.
+          Each block includes the footprint of the previous block, guaranteeing
+          the sequencing and control of the hole chain, making it unwavering.
         </h2>
-      </div>
-      <div class="row text-center topBottomPadding">
-        Todo nuevo bloque es firmado y lleva una huella única llamada “hash”,
-        esto permite la doble verificación de la integridad y veracidad del
-        contenido de cada bloque.
       </div>
     </div>
 
@@ -433,9 +442,8 @@
           <img src="/img/Lupa.png" style="width: 50px; padding-left: 10px" />
         </div>
         <div class="col-12 col-sm-6">
-          Todos los eventos registrados durante la jornada son completamente
-          transparentes y auditables sin revelar las identidades de los
-          usuarios.
+          All events recorded are auditable without revealing the users
+          identities.
         </div>
       </div>
 
@@ -445,18 +453,22 @@
       >
         <div class="col-12 col-sm-7">
           <div class="col-12 col-sm-9">
-            <h1 class="secureH1">
-              Sin monedas ni comisiones por evento registrado.
-            </h1>
-            <div class="topBottomPaddingSmall">
-              A diferencia de otras tecnologías blockchain, Democrachain no
-              requiere en el cobro de comisiones para que la información sea
-              procesada y aceptada, es resistente a fallos y soporta picos de
-              uso sin problema. Mientras no se utiliza el costo de
-              funcionamiento es mínimo. Está basada en tecnologías "Serverless".
+            <h1 class="secureH1">No fees</h1>
+            <div class="topBottomPaddingSmall" style="padding-top: 30px">
+              Unlike other blockchain technologies, no fee is required for
+              blocks to be processed and accepted.
             </div>
-            <button style="background-color: #0149b0; color: white">
-              Obtener Acceso Anticipado
+            <div class="topBottomPaddingSmall">
+              It is based on latest serverless architecture, making it the most
+              cost-effective alternative.
+            </div>
+
+            <button
+              onclick="goToDemo()"
+              style="background-color: #0149b0; color: white"
+              class="pointy"
+            >
+              Try the Demo
             </button>
           </div>
         </div>
@@ -467,56 +479,71 @@
 
       <div class="row" style="padding-top: 100px">
         <div class="col-12">
-          <h2>Preguntas Frecuentes</h2>
+          <h2>FAQ</h2>
         </div>
 
         <section>
           <details open>
-            <summary>¿Qué es un Smart Contract?</summary>
+            <summary>What is a Smart-contract?</summary>
             <div>
               <span>
-                Un smart contract es una pieza pequeña de información que agrega
-                caracteristicas y funcionalidades únicas al bloque que forma
-                parte de la red, de manera siempre transparente y entendible.
+                A smart contract is a little piece of code (written in javascript) that is written
+                inside a block and adds
+                unique features and functionalities to the network, always
+                transparent and understandable.
               </span>
               <span>
-                De esta forma podemos definir un contrato inteligente como un
-                acuerdo inquebrantable entre partes capaz de ejecutarse y
-                hacerse cumplir por sí mismo.
+                In other words, a smart contract acts an unbreakable
+                agreement between parties capable of executing and enforcing
+                itself through the blockchain system.
               </span>
               <span>
-                Las dos caracteristicas principales de un smart contract son las
-                siguientes:
+                The two main characteristics of a smart contract are:
               </span>
               <span>
-                • Es INMUTABLE, esto significa que gracias a que funciona bajo
-                la tecnología Blockchain, una vez ha sido firmado en la cadena
-                de bloques, ya no puede editarse o modificarse.
+                • It is <b>immutable</b>, which means that, thanks to the fact
+                that it operates under Blockchain technology, once it has been
+                signed on the blockchain, it can no longer be edited or
+                modified.
               </span>
               <span>
-                • Es DESCENTRALIZADO No depende de una sola entidad.
+                • It is <b>decentralized</b>. It does not depend on a single
+                entity.
               </span>
             </div>
           </details>
           <details>
-            <summary>¿Qué es un Bloque?</summary>
-            <div></div>
+            <summary>What is a block?</summary>
+              <span>
+                It's a plain text file that has to comply with certain requirements to be accepted by the network. 
+              </span>
+              <span>
+                For example it requires the hash of the latest block on it's scope, and the signature of who created it. 
+              </span>
           </details>
           <details>
-            <summary>¿Qué es un nodo?</summary>
-            <div></div>
+            <summary>What is a node?</summary>
+            <span>
+              All blocks are stored and processed by a network of nodes that execute the same program, allowing the network to work without a single point of failure.
+            </span>
+            <span>
+              Democrachain nodes can run inside <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> functions, making it the most cost-effective way to run a blockchain network.
+            </span>
           </details>
           <details>
-            <summary>¿Qué es una firma digital o hash?</summary>
-            <div></div>
+            <summary>What is a digital signature?</summary>
+            <span>
+              It's a piece of text that is generated using a private key and can be verified using a public key. Making it the digital version of a real-world signature. 
+            </span>
           </details>
           <details>
-            <summary>¿Qué es un servidor?</summary>
-            <div></div>
-          </details>
-          <details>
-            <summary>¿Qué significa trazabilidad?</summary>
-            <div></div>
+            <summary>How to use it?</summary>
+            <span>
+              You can use a demo of the service in <a href="https://democraid.com/">democraid.com</a> and find all the documentation of how to create a descentralized app using Democrachain in the <a href="https://democrachain.gitbook.io/docs/">Documentation</a>
+            </span>
+            <span>
+              For more information contact us at <a href="mailto:contact@democrachain.org">contact@democrachain.org</a>
+            </span>
           </details>
         </section>
       </div>
@@ -542,8 +569,15 @@
     <div class="container d-block d-md-none">
       <div class="row text-center blueBackgroundGradientDark">
         <div class="col-12 col-sm-4 mainButton"></div>
-        <div class="col-12 col-sm-4 mainButton"><a href="https://demv2-brasil-node.cloud.democrachain.org/v2/visor/index.html?scope=democraid">Visor de Blockchain</a></div>
-        <div class="col-12 col-sm-4 mainButton"><a href="https://democraid.com/">Demo</a></div>
+        <div class="col-12 col-sm-4 mainButton">
+          <a
+            href="https://demv2-brasil-node.cloud.democrachain.org/v2/visor/index.html?scope=democraid"
+            >Visor de Blockchain</a
+          >
+        </div>
+        <div class="col-12 col-sm-4 mainButton">
+          <a href="https://democraid.com/">Demo</a>
+        </div>
       </div>
     </div>
 
